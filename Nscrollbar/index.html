@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=0.7, user-scalable=yes">
+        <title>Notes App</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./css/jquery.mCustomScrollbar.css">
+    </head>
+    <body>
+        <div class="button button-menu">open</div>
+
+        <aside class="sidebar ">
+        	<nav class="navigation">
+        		<ul class="main-tab">
+					<li id="main-menu-header" class="mainmenu withripple active" data-target-container="mainmenu-container">
+						<a>Main menu</a>
+						<div class="ripple-container"></div>
+					</li>
+					<li class="accountinfo withripple" id="account-info-header" data-target-container="accountinfo-container">
+							<a>Account Info</a>
+							<div class="ripple-container"></div>
+					</li>
+					<li class="visible-mobile nav-close">
+						<span class="icon-close icon-close-left-panel active" id="closeIconOnMobile"></span>
+					</li>
+				</ul>
+				<section id="main-menu-tab" class="mainmenu-container mCustomScrollbar " data-mcs-theme="minimal" role="tablist" aria-multiselectable="true">
+				  <ul class="list-menu" id="main-menu-items">
+				    <li class="menu-item " id="menu-REPORTS">
+				      <a class="withripple menu-opener parent-menu ">
+				        <span class="txt-item pull-left txt-reports">
+				          <span class="icon icon-reports"></span> Reports </span>
+				        <span class="pull-right icon-arrow-right"></span>
+				      </a>
+				      <ul class="sub-menu" style="display: none;">
+				        <li data-url="/site-reports/outstanding/masternew" class="sub-menu-item " id="sub-menu-MASTEROUTSTANDING">
+				          <a href="#" class="redirect-item"> Master Outstanding </a>
+				        </li>
+				        <li data-url="/site-reports/enteredresult/master" class="sub-menu-item " id="sub-menu-MASTERWINLOSS">
+				          <a href="#" class="redirect-item"> Master Win Loss </a>
+				        </li>
+				        <li data-url="/site-reports/winlossdetail/master" class="sub-menu-item " id="sub-menu-MASTERWINLOSTDETAIL">
+				          <a href="#" class="redirect-item"> Master Win Loss Detail </a>
+				        </li>
+				        <li data-url="/site-reports/matchwinlossdetail/index" class="sub-menu-item " id="sub-menu-MATCHWINLOSTDETAIL">
+				          <a href="#" class="redirect-item"> Match Win Loss Detail </a>
+				        </li>
+				        <li data-url="/site-reports/winlossanalysis/master" class="sub-menu-item " id="sub-menu-WINLOSSANALYSIS">
+				          <a href="#" class="redirect-item"> Win Loss Analysis </a>
+				        </li>
+				        <li data-url="/site-reports/winlossanalysischart/master" class="sub-menu-item " id="sub-menu-WINLOSSANALYSISCHART">
+				          <a href="#" class="redirect-item"> Win Loss Analysis Chart </a>
+				        </li>
+				        <li data-url="/site-reports/WinLossByProduct/master" class="sub-menu-item " id="sub-menu-WINLOSSBYPRODUCT">
+				          <a href="#" class="redirect-item"> Win Loss By Product </a>
+				        </li>
+				        <li data-url="/site-reports/SuperWinLossDetailByPT/Index" class="sub-menu-item " id="sub-menu-SUPERWINLOSSDETAILBYPT">
+				          <a href="#" class="redirect-item"> Super Win Loss Detail By PT </a>
+				        </li>
+				        <li data-url="/site-reports/commissionbybettype/master" class="sub-menu-item " id="sub-menu-COMMISSIONBYBETTYPE">
+				          <a href="#" class="redirect-item"> Commission By Bet Type </a>
+				        </li>
+				        <li data-url="/site-reports/Statement/SMAStatement" class="sub-menu-item " id="sub-menu-STATEMENT">
+				          <a href="#" class="redirect-item"> Statement </a>
+				        </li>
+				        <li data-url="/site-results/Normal" class="sub-menu-item " id="sub-menu-RESULT">
+				          <a href="#" class="redirect-item"> Results </a>
+				        </li>
+				        <li data-url="/site-reports/progressivecontribution/index" class="sub-menu-item " id="sub-menu-PROGRESSIVEGAMESCONTRIBUTION">
+				          <a href="#" class="redirect-item"> Progressive Games Contribution </a>
+				        </li>
+				        <li data-url="/site-reports/bonusdetail/index" class="sub-menu-item " id="sub-menu-BONUSDETAIL">
+				          <a href="#" class="redirect-item"> Bonus Detail <span class="beta-version">New</span>
+				          </a>
+				        </li>
+				      </ul>
+				    </li>
+				    <li class="menu-item " id="menu-MEMBERINFO">
+				      <a class="withripple menu-opener parent-menu ">
+				        <span class="txt-item pull-left txt-memberinfo">
+				          <span class="icon icon-memberinfo"></span> MEMBER INFORMATION </span>
+				        <span class="pull-right icon-arrow-right"></span>
+				      </a>
+				      <ul class="sub-menu" style="display: none;">
+				        <li data-url="/ex-main/_MemberInfo/SearchAndCopy/MasterPage.aspx?lv=4" class="sub-menu-item " id="sub-menu-NEWMASTER">
+				          <a href="#" class="redirect-item"> New Master </a>
+				        </li>
+				        <li data-url="/ex-main/_SubAcc/SubAccList.aspx" class="sub-menu-item " id="sub-menu-SUBACCOUNT">
+				          <a href="#" class="redirect-item"> Sub Account </a>
+				        </li>
+				        <li data-url="/site-memberinfo/CustomerList/master" class="sub-menu-item " id="sub-menu-MASTERLIST">
+				          <a href="#" class="redirect-item"> Master Agent List </a>
+				        </li>
+				        <li data-url="/ex-main/_MemberInfo/CustomerList/Super/MasterList.aspx" class="sub-menu-item " id="sub-menu-MASTERLIST">
+				          <a href="#" class="redirect-item"> Master Agent List <span> (Old)</span>
+				          </a>
+				        </li>
+				        <li data-url="/site-memberinfo/ProblemAccount" class="sub-menu-item " id="sub-menu-PROBLEMACCOUNTLIST">
+				          <a href="#" class="redirect-item"> Problem Account List </a>
+				        </li>
+				        <li data-url="/site-memberinfo/CreditBalance" class="sub-menu-item " id="sub-menu-CREDITBALANCE">
+				          <a href="#" class="redirect-item"> Credit/Balance </a>
+				        </li>
+				        <li data-url="/ex-main/_MemberInfo/PositionTakingList/Sportbook/SportbookPositionTakingList.aspx" class="sub-menu-item " id="sub-menu-POSITIONTAKING">
+				          <a href="#" class="redirect-item"> Position Taking (%) </a>
+				        </li>
+				        <li data-url="/ex-main/_MemberInfo/PositionTakingList/Casino/CasinoPositionTakingList.aspx" class="sub-menu-item " id="sub-menu-CASINOPOSITIONTAKING">
+				          <a href="#" class="redirect-item"> Casino Position Taking (%) </a>
+				        </li>
+				        <li data-url="/ex-main/_MemberInfo/Commission/MemberCommissionSportbook.aspx" class="sub-menu-item " id="sub-menu-MEMBERCOMMISSION">
+				          <a href="#" class="redirect-item"> Member Commission </a>
+				        </li>
+				        <li data-url="/site-memberinfo/WinLossLimit/Index" class="sub-menu-item " id="sub-menu-MEMBERWINLIMIT">
+				          <a href="#" class="redirect-item"> Member Win/Loss Limit </a>
+				        </li>
+				        <li data-url="/ex-main/MemberInformation/BetChoiceLimit/Index" class="sub-menu-item " id="sub-menu-BETCHOICELIMIT">
+				          <a href="#" class="redirect-item"> Bet Choice Limit </a>
+				        </li>
+				        <li data-url="/site-memberinfo/ProgressiveJackpot/Index" class="sub-menu-item " id="sub-menu-PROGRESSIVEJACKPOTGAMES">
+				          <a href="#" class="redirect-item"> Progressive Jackpot Games </a>
+				        </li>
+				        <li data-url="/site-memberinfo/IndirectLoginAccount/Index" class="sub-menu-item " id="sub-menu-INDIRECTLOGINACCOUNT">
+				          <a href="#" class="redirect-item"> Indirect Login Account </a>
+				        </li>
+				        <li data-url="/site-memberinfo/DormantAccount/Index" class="sub-menu-item " id="sub-menu-DORMANTACCOUNTLIST">
+				          <a href="#" class="redirect-item"> Dormant Account List </a>
+				        </li>
+				      </ul>
+				    </li>
+				    <li class="menu-item " id="menu-BETLISTS">
+				      <a class="withripple menu-opener parent-menu ">
+				        <span class="txt-item pull-left txt-betlists">
+				          <span class="icon icon-betlists"></span> Bet Lists </span>
+				        <span class="pull-right icon-arrow-right"></span>
+				      </a>
+				      <ul class="sub-menu" style="display: none;">
+				        <li data-url="/site-betlists/CancelledBet/Index" class="sub-menu-item " id="sub-menu-CANCELLEDBETS">
+				          <a href="#" class="redirect-item"> Cancelled Bets </a>
+				        </li>
+				        <li data-url="/site-betlists/correctscore/index" class="sub-menu-item " id="sub-menu-CORRECTSCORE">
+				          <a href="#" class="redirect-item"> Correct Score </a>
+				        </li>
+				        <li data-url="/site-betlists/CombinationMixParlay/Index" class="sub-menu-item " id="sub-menu-PARLAY">
+				          <a href="#" class="redirect-item"> Parlay </a>
+				        </li>
+				        <li data-url="/site-betlists/betlistbybettype/CleanSheet?bettype=13" class="sub-menu-item " id="sub-menu-BETTYPE13">
+				          <a href="#" class="redirect-item"> Clean Sheet </a>
+				        </li>
+				        <li data-url="/site-betlists/betlistbybettype/DoubleChance?bettype=24" class="sub-menu-item " id="sub-menu-BETTYPE24">
+				          <a href="#" class="redirect-item"> Double Chance </a>
+				        </li>
+				        <li data-url="/site-betlists/betlistbybettype/BothNoneNeitherTeamToScore?bettype=26" class="sub-menu-item " id="sub-menu-BETTYPE26">
+				          <a href="#" class="redirect-item"> Both/One/Neither Team To Score </a>
+				        </li>
+				        <li data-url="/site-betlists/betlistbybettype/ToWinToNil?bettype=27" class="sub-menu-item " id="sub-menu-BETTYPE27">
+				          <a href="#" class="redirect-item"> To Win To Nil </a>
+				        </li>
+				        <li data-url="/site-betlists/betlistbybettype/ThreeWayHandicap?bettype=28" class="sub-menu-item " id="sub-menu-BETTYPE28">
+				          <a href="#" class="redirect-item"> 3-Way Handicap </a>
+				        </li>
+				      </ul>
+				    </li>
+				    <li class="menu-item " id="menu-BETSANDFORECAST">
+				      <a class="withripple menu-opener parent-menu ">
+				        <span class="txt-item pull-left txt-betsandforecast">
+				          <span class="icon icon-betsandforecast"></span> Bets & Forecast </span>
+				        <span class="pull-right icon-arrow-right"></span>
+				      </a>
+				      <ul class="sub-menu" style="display: none;">
+				        <li data-url="/site-totalbetsforecast/Forecast" class="sub-menu-item " id="sub-menu-SOCCER">
+				          <a href="#" class="redirect-item"> Soccer </a>
+				        </li>
+				        <li data-url="/ex-totalbetsforecast/_TotalBets/HDPOU.aspx" class="sub-menu-item " id="sub-menu-HOUL">
+				          <a href="#" class="redirect-item"> Handicap/Over Under/Live </a>
+				        </li>
+				        <li data-url="/ex-totalbetsforecast/_TotalBets/MoneyLine.aspx" class="sub-menu-item " id="sub-menu-MONEYLINE">
+				          <a href="#" class="redirect-item"> Money Line </a>
+				        </li>
+				        <li data-url="/ex-totalbetsforecast/_TotalBets/OddEven1x2.aspx" class="sub-menu-item " id="sub-menu-OE1X2DND">
+				          <a href="#" class="redirect-item"> Odd/Even + 1x2 + DND </a>
+				        </li>
+				        <li data-url="/ex-totalbetsforecast/_TotalBets/TotalGoal.aspx" class="sub-menu-item " id="sub-menu-FTHTTOTALGOAL">
+				          <a href="#" class="redirect-item"> FT &amp; HT Total Goal </a>
+				        </li>
+				        <li data-url="/ex-totalbetsforecast/_TotalBets/OutRight.aspx" class="sub-menu-item " id="sub-menu-OUTRIGHT">
+				          <a href="#" class="redirect-item"> Outright </a>
+				        </li>
+				        <li data-url="/ex-totalbetsforecast/_TotalBets/HTFT.aspx" class="sub-menu-item " id="sub-menu-HTFT">
+				          <a href="#" class="redirect-item"> HT/FT </a>
+				        </li>
+				        <li data-url="/ex-totalbetsforecast/_TotalBets/FGLG.aspx" class="sub-menu-item " id="sub-menu-FTHTFGLG">
+				          <a href="#" class="redirect-item"> FT &amp; HT FG/LG </a>
+				        </li>
+				        <li data-url="/ex-totalbetsforecast/_TotalBets/HomeDrawAwayNoBet.aspx" class="sub-menu-item " id="sub-menu-HOMEDRAWAWAYNOBET">
+				          <a href="#" class="redirect-item"> Home/Draw/Away No Bet </a>
+				        </li>
+				        <li data-url="/ex-totalbetsforecast/_TotalBets/NumberGame.aspx" class="sub-menu-item " id="sub-menu-NUMBERGAME">
+				          <a href="#" class="redirect-item"> Number Game </a>
+				        </li>
+				        <li data-url="/ex-totalbetsforecast/_Forecast/FC1X2.aspx" class="sub-menu-item " id="sub-menu-LBL1X2">
+				          <a href="#" class="redirect-item"> 1X2 </a>
+				        </li>
+				        <li data-url="/ex-totalbetsforecast/ForecastScoreMap/Index" class="sub-menu-item " id="sub-menu-SCOREMAP">
+				          <a href="#" class="redirect-item"> Score Map </a>
+				        </li>
+				      </ul>
+				    </li>
+				    <li class="menu-item " id="menu-BETSTATISTICS">
+				      <a class="withripple menu-opener parent-menu ">
+				        <span class="txt-item pull-left txt-betstatistics">
+				          <span class="icon icon-betstatistics"></span> Risk Analysis </span>
+				        <span class="pull-right icon-arrow-right"></span>
+				      </a>
+				      <ul class="sub-menu" style="display: none;">
+				        <li data-url="/site-reports/RiskAnalysisIPMatching" class="sub-menu-item " id="sub-menu-IPMATCHING">
+				          <a href="#" class="redirect-item"> IP Matching </a>
+				        </li>
+				        <li data-url="/site-reports/BetChoiceMatching" class="sub-menu-item " id="sub-menu-BETCHOICEMATCHING">
+				          <a href="#" class="redirect-item"> Bet Choice Matching </a>
+				        </li>
+				      </ul>
+				    </li>
+				    <li class="menu-item " id="menu-TRANSFER">
+				      <a class="withripple menu-opener parent-menu ">
+				        <span class="txt-item pull-left txt-transfer">
+				          <span class="icon icon-transfer"></span> Transfer </span>
+				        <span class="pull-right icon-arrow-right"></span>
+				      </a>
+				      <ul class="sub-menu" style="display: none;">
+				        <li data-url="/ex-main/_Transfer/Super/MasterList.aspx?v2" class="sub-menu-item " id="sub-menu-TRANSFER">
+				          <a href="#" class="redirect-item"> Transfer </a>
+				        </li>
+				        <li data-url="/site-transfer/TransferAllAndClearCredit/Index?v2" class="sub-menu-item " id="sub-menu-TRANSFERALLANDCLEARCREDIT">
+				          <a href="#" class="redirect-item"> Transfer All &amp; Clear Credit </a>
+				        </li>
+				      </ul>
+				    </li>
+				    <li class="menu-item " id="menu-VIEWLOG">
+				      <a class="withripple menu-opener parent-menu ">
+				        <span class="txt-item pull-left txt-viewlog">
+				          <span class="icon icon-viewlog"></span> View Log </span>
+				        <span class="pull-right icon-arrow-right"></span>
+				      </a>
+				      <ul class="sub-menu" style="display: none;">
+				        <li data-url="/site-viewlogs/Setting" class="sub-menu-item " id="sub-menu-SETTING">
+				          <a href="#" class="redirect-item"> Setting </a>
+				        </li>
+				        <li data-url="/site-viewlogs/Status" class="sub-menu-item " id="sub-menu-STATUS">
+				          <a href="#" class="redirect-item"> Status </a>
+				        </li>
+				        <li data-url="/site-viewlogs/Credit" class="sub-menu-item " id="sub-menu-CREDIT">
+				          <a href="#" class="redirect-item"> Credit </a>
+				        </li>
+				        <li data-url="/site-viewlogs/Login" class="sub-menu-item " id="sub-menu-LOGIN">
+				          <a href="#" class="redirect-item"> Login </a>
+				        </li>
+				      </ul>
+				    </li>
+				    <li class="menu-item " id="menu-ANNOUNCEMENTS">
+				      <a class="withripple menu-opener parent-menu ">
+				        <span class="txt-item pull-left txt-announcements">
+				          <span class="icon icon-announcements"></span> Announcements </span>
+				        <span class="pull-right icon-arrow-right"></span>
+				      </a>
+				      <ul class="sub-menu" style="display: none;">
+				        <li data-url="/site-messages/MessageHistory/Index?messagetype=0" class="sub-menu-item " id="sub-menu-NORMAL">
+				          <a href="#" class="redirect-item"> Normal </a>
+				        </li>
+				        <li data-url="/site-messages/MessageHistory/Index?messagetype=2" class="sub-menu-item " id="sub-menu-SPECIAL">
+				          <a href="#" class="redirect-item"> Special </a>
+				        </li>
+				        <li data-url="/site-messages/Announcement/Index" class="sub-menu-item " id="sub-menu-SYSTEMUPDATE">
+				          <a href="#" class="redirect-item"> System </a>
+				        </li>
+				        <li data-url="/site-messages/MessageHistory/Index?messagetype=1" class="sub-menu-item " id="sub-menu-PERSONALMESSAGE">
+				          <a href="#" class="redirect-item"> Personal Message </a>
+				        </li>
+				      </ul>
+				    </li>
+				    <li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li><li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li><li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li><li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li><li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li><li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li><li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li><li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li><li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li><li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li><li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li><li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li><li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li><li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li><li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li><li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li><li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li><li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li><li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li><li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li><li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li><li class="menu-item" id="menu-CHATBOT">
+				      <a class="withripple menu-opener parent-menu redirect-item" href="/site-main/ChatBot/Index" target="main">
+				        <span class="txt-item pull-left">
+				          <span class="icon icon-chatbot"></span>Chatbot </span>
+				      </a>
+				    </li>
+				  </ul>
+				  <div class="extra-box">
+				    <span class="icon icon-user" id="user-icon"></span>
+				  </div>
+				</section>
+        	</nav>
+        </aside>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
+    	<script src="./js/scripts.js"></script>
+
+     
+
+
+    </body>
+</html>
